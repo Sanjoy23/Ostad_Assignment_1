@@ -4,28 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DashBoard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav>
         <div>
-            <ul class="itemUL">
-                <li class="itemLi"><a href="#">Home</a></li>
-                <li class="itemLi"><a href="#">Products</a></li>
-                <li class="itemLi"><a href="#">About</a></li>
-                <li class="itemLi"><a href="#">News</a></li>
-                <li class="itemLi"><a href="#">Contact</a></li>
-                <li class="itemLi"><a href="#">Career</a></li>
-            </ul>
-
             <div>
-                <a href="#">Login</a>
-                <a href="#">SignUp</a>
+                <ul class="itemUL">
+                    <li class="itemLi"><a href="#">Home</a></li>
+                    <li class="itemLi"><a href="#">Products</a></li>
+                    <li class="itemLi"><a href="#">About</a></li>
+                    <li class="itemLi"><a href="#">News</a></li>
+                    <li class="itemLi"><a href="#">Contact</a></li>
+                    <li class="itemLi"><a href="#">Career</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="itemUL">
+                    <li class="itemLi"><a href="">Login</a></li>
+                    <li class="itemLi"><a href="">SignUp</a></li>
+                </ul>
             </div>
         </div>
     </nav>
+    
+    <div class="sidebar">
+        <h2>DashBoard</h2>
+        <ul>
+            <li class="sidebarType" onclick="toggleMenu('productsMenu')">Products ▾</li>
+            <ul id="productsMenu" class="submenu">
+                <li><a href="#">ERP Application</a></li>
+                <li><a href="#">Core Banking Platform</a></li>
+                <li><a href="#">Management System</a></li>
+            </ul>
+
+            <!-- Services Section -->
+            <li class="sidebarType" onclick="toggleMenu('servicesMenu')">Services ▾</li>
+            <ul id="servicesMenu" class="submenu">
+                <li><a href="#">Software Development</a></li>
+                <li><a href="#">Database Maintenance</a></li>
+                <li><a href="#">Quality Assurance & Testing</a></li>
+            </ul>
+
+            <li class="sidebarType" onclick="toggleMenu('ExpertisesMenu')">Expertises ▾</li>
+            <ul id="ExpertisesMenu" class="submenu">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Development</a></li>
+                <li><a href="#">ORM</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h1>Welcome to DashBoard</h1>
+        <p>Click on the menu to see the content</p>
+    </div>
+
+    <script>
+        function toggleMenu(menuId) {
+            var menu = document.getElementById(menuId);
+            menu.classList.toggle("active");
+        }
+    </script> 
 </body>
 
 </html>
